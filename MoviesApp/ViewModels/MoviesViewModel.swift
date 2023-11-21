@@ -12,36 +12,22 @@ typealias MoviesFetchedHandler = () -> Void
 class MoviesViewModel {
     var movies: [Movie] = []
     var onMoviesFetched: MoviesFetchedHandler?
+    private let movieAPI: MovieAPI
 
+    init(movieAPI: MovieAPI = Api()) {
+        self.movieAPI = movieAPI
+    }
 
     func fetchMovies() {
-        let apiKey = "15c56089249c2ee0c211427a2262fc74"
-        guard let url = URL(string: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=\(apiKey)") else {
-            return
-        }
-
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error fetching movies: \(error)")
-                return
-            }
-
-            guard let data = data else {
-                print("Error: No data received")
-                return
-            }
-
-            do {
-                let jsonString = String(data: data, encoding: .utf8)
-                print("Received JSON: \(jsonString ?? "No JSON received")")
-
-                let discover = try JSONDecoder().decode(Discover.self, from: data)
+        movieAPI.fetchMovies { result in
+            switch result {
+            case .success(let discover):
                 self.movies = discover.results
                 self.onMoviesFetched?()
-            } catch let error {
-                print("Error decoding data: \(error)")
+            case .failure(let error):
+                print("Error fetching movies: \(error)")
             }
-        }.resume()
+        }
     }
 
     func numberOfMovies() -> Int {

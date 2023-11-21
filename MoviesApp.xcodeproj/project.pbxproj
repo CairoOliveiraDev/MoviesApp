@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9A767EB2B0D411600BB2E4D /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A767EA2B0D411600BB2E4D /* Api.swift */; };
 		E9F692702B07CD8500EB181D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6926F2B07CD8500EB181D /* AppDelegate.swift */; };
 		E9F692722B07CD8500EB181D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F692712B07CD8500EB181D /* SceneDelegate.swift */; };
 		E9F692742B07CD8500EB181D /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F692732B07CD8500EB181D /* MoviesViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9A767EA2B0D411600BB2E4D /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E9F6926C2B07CD8500EB181D /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F6926F2B07CD8500EB181D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F692712B07CD8500EB181D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		E9F692A82B07E31400EB181D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E9A767EA2B0D411600BB2E4D /* Api.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				E9F692B12B08036A00EB181D /* MovieDetailView.swift in Sources */,
 				E9F692A72B07DF5D00EB181D /* Movie.swift in Sources */,
 				E9F692702B07CD8500EB181D /* AppDelegate.swift in Sources */,
+				E9A767EB2B0D411600BB2E4D /* Api.swift in Sources */,
 				E9F692B32B090F7900EB181D /* Discover.swift in Sources */,
 				E9F692B52B09192200EB181D /* UIImageView+Extension.swift in Sources */,
 				E9F692722B07CD8500EB181D /* SceneDelegate.swift in Sources */,
