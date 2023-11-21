@@ -12,7 +12,7 @@ struct Movie: Codable {
     let title: String
     let posterPath: String
     let voteAverage: Double
-    let releaseDate: String
+    let releaseDate: String 
     let overview: String
     let originalLanguage: String
 
